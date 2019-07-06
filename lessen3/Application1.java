@@ -99,6 +99,7 @@ public class Application1 {
 
         return j;
     }
+
     static public String[] removeNull(String[] a) {
         ArrayList<String> removedNull = new ArrayList<String>();
         for (String str : a)
@@ -106,6 +107,7 @@ public class Application1 {
                 removedNull.add(str);
         return removedNull.toArray(new String[0]);
     }
+
     static void leksema(String sort, String simvol) {
         Pattern pattern = Pattern.compile("[ ^'\":,]");
         String[] words = pattern.split(sort);
@@ -177,12 +179,14 @@ public class Application1 {
         }
 
         String[][] stringResultNew = new String[10][];
-        for (int i = 0; i < stringResult.length; i++){
-            stringResultNew[i]=removeNull(stringResult[i]);
+        for (int i = 0; i < stringResult.length; i++) {
+            stringResultNew[i] = removeNull(stringResult[i]);
 
         }
 
-            for (int i = 0; i < stringResultNew.length; i++) {
+        for (int i = 0; i < stringResultNew.length; i++) {
+            Arrays.sort(stringResultNew[i], String.CASE_INSENSITIVE_ORDER);
+                /*
             for (int k = 0; k < stringResultNew[i].length; k++) {
                 for (int j = 0; j < stringResultNew[i].length - 1 - k; j++) {
                     if (stringResultNew[i][j] != null && stringResultNew[i][j + 1] != null) {
@@ -193,7 +197,7 @@ public class Application1 {
                         }
                     }
                 }
-            }
+            }*/
         }
 
 
@@ -247,9 +251,10 @@ public class Application1 {
                 sortSlovo(sytimg);
                 break;
             case 3:
-
-
-                leksema(sytimg, "o");
+                System.out.println("Введите символ (в случае вода строки поиск будет по 1му введенному символу)");
+                Scanner scaner = new Scanner(System.in);
+                String scaners = scaner.nextLine();
+                leksema(sytimg, scaners);
 
 
                 break;
@@ -263,9 +268,9 @@ public class Application1 {
             System.out.println("\n" + str[i]+"  \n "
                     +i);
         }*/
-        //  sortSlovo(sytimg);
-        //    leksema(sytimg, "a");
+
+//  sortSlovo(sytimg);
+//    leksema(sytimg, "a");
+
     }
-
 }
-
