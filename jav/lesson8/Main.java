@@ -15,7 +15,7 @@ public class Main {
    //     System.out.println("Ввыод отсортированных по фамилии пользователей");
         System.out.println("--------------");
 
-        aCustomers.toStrings();
+       // aCustomers.toStrings();
 
 
         Scanner in = new Scanner(System.in);
