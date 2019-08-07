@@ -26,10 +26,6 @@ public class Cycles7 {
 
             }
 
-
-
-
-
             /* for (; n < m; n++) {
                 int x = 2;
                 int z = n;

@@ -1,6 +1,8 @@
 package by.peleng.java.lesson1;
 
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 /*8. Даны два числа. Определить цифры, входящие в запись как первого так и второго числа*/
 public class Cycles8 {
@@ -30,8 +32,8 @@ public class Cycles8 {
 
 
         int i = 0, j = 0, k = 0;
-        int[] arr = new int[Math.max(digits.length, digits2.length)];
-
+       // int[] arr = new int[Math.max(digits.length, digits2.length)];
+        Set<Integer> finalSet=new HashSet<>();
        /* while (i < digits.length && j < digits2.length) {
             if (digits[i] < digits2[j]) {
                 i++;
@@ -45,7 +47,7 @@ public class Cycles8 {
 
         for (i=0;i<digits.length;i++){
             for (j=0;j<digits2.length;j++){
-                if (digits[i] == digits2[j]){ arr[k++] = digits[i];
+                if (digits[i] == digits2[j]){ finalSet.add(digits[i]);
 
 
                 break;}
@@ -55,10 +57,10 @@ public class Cycles8 {
 
         }
 
-        for (i = 0; i < arr.length; i++) {
-            if (arr[i] != 0) {
-                System.out.println(arr[i]);
-            }
+        for (Integer integer:finalSet) {
+
+                System.out.print(integer + "  ");
+
         }
 
 
