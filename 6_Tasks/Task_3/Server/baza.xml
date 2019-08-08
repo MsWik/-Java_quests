@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><studentslist>
+
+    <student id="1">
+        <name>Беспальцев</name>
+        <surname>Андрей</surname>
+        <age>32</age>
+        <location>Минск</location>
+        <grupnumber>25А</grupnumber>
+    </student>
+
+    <student>
+
+        
+        
+        
+        
+        
+        
+        
+        
+    </student>
+    <student id="3">
+        <name>Никитин</name>
+        <surname>Сергей</surname>
+        <age>34</age>
+        <location>Минск</location>
+        <grupnumber>21D</grupnumber>
+    </student>
+<student id="4"><name>Петров</name><surname>Владимир</surname><age>21</age><location>Минск</location><grupnumber>25В</grupnumber></student>
+ <student id="5"><name>Петр</name><surname>Иванченко</surname><age>27</age><location>Минск</location><grupnumber>25В</grupnumber></student></studentslist>

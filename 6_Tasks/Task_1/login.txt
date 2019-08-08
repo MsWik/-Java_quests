@@ -1,0 +1,2 @@
+id=25|, name=nn|, famali=123|, email=wmamantw@tut.by|, age=25|, login=nn|, password=48690|, admin=true|
+id=1|, name=Андрей|, famali=wmamantw@tut.by|, email=wmamantw@tut.by|, age=25|, login=123|, password=48690|, admin=false|
