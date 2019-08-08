@@ -1,44 +1,41 @@
 package by.peleng.java.lessen3;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 /*7. Вводится строка. Требуется удалить из нее повторяющиеся символы и все пробелы. Например, если было введено "abc cde
         def", то должно быть выведено "abcdef".*/
 
 public class StringLesson7 {
-    /*String deleteCharacters(String str, int from, int to) {
-        return str.substring(0,from)+str.substring(to);
-    }*/
-    public static void main(String[] args) {
-        String result;
-
-        Scanner in = new Scanner(System.in);
-        // System.out.println("Введите строку ");
-        //sytimg = in.nextLine();
-        String sytimg = "gts stg fgt sdhjcgtr tring";
-        StringBuffer stringBuffer = new StringBuffer(sytimg);
 
 
-        for (int i = 0; i < stringBuffer.length(); i++) {
-            for (int j = i + 1; j < stringBuffer.length() - 1; j++) {
-                if (stringBuffer.charAt(i) == stringBuffer.charAt(j)) {
-                    stringBuffer.delete(j, j + 1);
 
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter string: ");
+
+        String str = reader.readLine();
+        String newStr = "";
+
+        for (int i = 0; i < str.length(); i++) {
+            if(str.charAt(i) != ' ') {
+                boolean k = true;
+                for (int j = 0; j < newStr.length(); j++) {
+                    if (str.charAt(i) == newStr.charAt(j)) {
+                        k = false;
+                        break;
+                    }
                 }
 
-
+                if (k) {
+                    newStr += str.charAt(i);
+                }
             }
-
-
         }
 
-
-        result = stringBuffer.toString();
-        result = result.replaceAll("\\s+", "");
-
-        //  result = result.replaceAll("([ ])\\1", "");
-        System.out.println(result);
+        System.out.println(newStr);
+    }
     }
 
-
-}
