@@ -32,7 +32,7 @@ public class FileNoteDAO implements NoteDAO {
 
 
             writer = new BufferedWriter(new OutputStreamWriter(
-                    new FileOutputStream("baza.txt", true), "utf-8"));
+                    new FileOutputStream("./resourсes/baza.txt", true), "utf-8"));
             writer.write(str);
             //   System.out.println(str);
             writer.flush();
@@ -70,7 +70,7 @@ public class FileNoteDAO implements NoteDAO {
         String s;
         String listNotes = "";
         try {
-            BufferedReader br = new BufferedReader(new FileReader("baza.txt"));
+            BufferedReader br = new BufferedReader(new FileReader("./resourсes/baza.txt"));
             while ((s = br.readLine()) != null) {
                 listNotes += s+"\n";
 
@@ -143,7 +143,7 @@ public class FileNoteDAO implements NoteDAO {
 
 
             writer = new BufferedWriter(new OutputStreamWriter(
-                    new FileOutputStream("baza.txt", false), "utf-8"));
+                    new FileOutputStream("./resourсes/baza.txt", false), "utf-8"));
             writer.write(str);
             //   System.out.println(str);
             writer.flush();

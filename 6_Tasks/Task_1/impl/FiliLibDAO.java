@@ -81,7 +81,7 @@ public class FiliLibDAO implements LibDAO {
         String s;
         String bookList = "";
         try {
-            BufferedReader br = new BufferedReader(new FileReader("baza.txt"));
+            BufferedReader br = new BufferedReader(new FileReader("./resourсes/baza.txt"));
             while ((s = br.readLine()) != null) {
                 bookList += s+"\n";
             }
@@ -102,7 +102,7 @@ public class FiliLibDAO implements LibDAO {
             br.close();
             System.out.println(loginListAr);
             writer = new BufferedWriter(new OutputStreamWriter(
-                    new FileOutputStream("baza.txt", false), "utf-8"));
+                    new FileOutputStream("./resourсes/baza.txt", false), "utf-8"));
             String finalStringAdd="";
             for (String count:loginListAr){
               finalStringAdd+=count+"\n";
@@ -139,7 +139,7 @@ public class FiliLibDAO implements LibDAO {
         String s;
         String bookList = "";
         try {
-            BufferedReader br = new BufferedReader(new FileReader("baza.txt"));
+            BufferedReader br = new BufferedReader(new FileReader("./resourсes/baza.txt"));
             while ((s = br.readLine()) != null) {
                 bookList += s+"\n";
 
@@ -187,7 +187,7 @@ public class FiliLibDAO implements LibDAO {
         String s;
         String bookList = "";
         try {
-            BufferedReader br = new BufferedReader(new FileReader("baza.txt"));
+            BufferedReader br = new BufferedReader(new FileReader("./resourсes/baza.txt"));
             while ((s = br.readLine()) != null) {
                 bookList += s+"\n";
 

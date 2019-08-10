@@ -48,7 +48,7 @@ public class FileUserDAO implements UserDAO {
         try {
 
             List<String> loginListAr = new ArrayList<>();
-            List<String> lines = Files.readAllLines(Paths.get("login.txt"), UTF_8);
+            List<String> lines = Files.readAllLines(Paths.get("./resourсes/login.txt"), UTF_8);
             for (String line : lines) {
                 loginListAr.add(line);
                 //         System.out.println(line);
@@ -102,7 +102,7 @@ public class FileUserDAO implements UserDAO {
 
 
             writer = new BufferedWriter(new OutputStreamWriter(
-                    new FileOutputStream("login.txt", true), "utf-8"));
+                    new FileOutputStream("./resourсes/login.txt", true), "utf-8"));
             writer.write(str);
             //   System.out.println(str);
             writer.flush();
@@ -133,7 +133,7 @@ public class FileUserDAO implements UserDAO {
         String s;
         String loginList = "";
         try {
-            BufferedReader br = new BufferedReader(new FileReader("login.txt"));
+            BufferedReader br = new BufferedReader(new FileReader("./resourсes/login.txt"));
             while ((s = br.readLine()) != null) {
                 loginList += s + "\n";
             }
@@ -154,7 +154,7 @@ public class FileUserDAO implements UserDAO {
             br.close();
             System.out.println(loginListAr);
             writer = new BufferedWriter(new OutputStreamWriter(
-                    new FileOutputStream("login.txt", false), "utf-8"));
+                    new FileOutputStream("./resourсes/login.txt", false), "utf-8"));
             String finalStringAdd = "";
             for (String count : loginListAr) {
                 finalStringAdd += count + "\n";
@@ -214,7 +214,7 @@ public class FileUserDAO implements UserDAO {
         try {
 
 
-            List<String> lines = Files.readAllLines(Paths.get("login.txt"), UTF_8);
+            List<String> lines = Files.readAllLines(Paths.get("./resourсes/login.txt"), UTF_8);
             for (String line : lines) {
                 setUse.add(toUser(line));
 
